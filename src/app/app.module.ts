@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AuthorsService } from './authors.service';
+import { AuthorsComponent } from './authors/authors.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule
