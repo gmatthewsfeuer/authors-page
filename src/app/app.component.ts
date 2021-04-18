@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { AuthorsService } from './authors.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'authors-page';
+  title = 'Authors Page';
+  authors;
+  countAuthors;
+
+  constructor(private authorsService: AuthorsService) {
+    this.authors = this.authorsService.getAuthors();
+    this.countAuthors = this.authors.length;
+  }
 }
